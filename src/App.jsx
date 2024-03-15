@@ -1,6 +1,7 @@
 import './App.css'
-import Banner from './Components/Header/Banner'
-import Header from './Components/Header/Header'
+import Banner from './Components/Header/Banner';
+import Header from './Components/Header/Header';
+import Recipes from './Components/Recipes/Recipes';
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
 
      <Header></Header>
       <Banner></Banner>
+      <Recipes></Recipes>
     </>
   )
 }
