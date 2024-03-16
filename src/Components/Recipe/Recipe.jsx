@@ -2,7 +2,7 @@ import { MdOutlineWatchLater } from "react-icons/md";
 import { FaFire } from "react-icons/fa";
 import PropTypes from 'prop-types';
 
-const Recipe = ({recipe}) => {
+const Recipe = ({recipe,handleWantToCook}) => {
     const {recipe_name,short_description,recipe_image,ingredients,preparing_time,calories}=recipe;
     return (
         <div>
@@ -33,7 +33,8 @@ const Recipe = ({recipe}) => {
                         </div>
                     </div>
                     <div className="card-actions my-3">
-                    <button className="btn border-none rounded-full bg-[#0BE58A] text-black px-5">Explore Now</button>
+                    <button onClick={()=>handleWantToCook(recipe)}
+                     className="btn border-none rounded-full bg-[#0BE58A] text-black px-5">Want to Cook</button>
                     </div>
                 </div>
             </div>   
@@ -43,6 +44,7 @@ const Recipe = ({recipe}) => {
 };
 Recipe.propTypes={
     recipe:PropTypes.object.isRequired,
+    handleWantToCook:PropTypes.func
 }
 
 export default Recipe;
