@@ -9,10 +9,20 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [recipes,setRecipes]=useState([]);
+  const[totalTime,setTotalTime]=useState(0)
+  const[totalCalories,setTotalCalories]=useState(0)
 
   const handleWantToCook=recipe=>{
     const newRecipes=[...recipes,recipe]
     setRecipes(newRecipes)
+  }
+
+  const handlePreparingRecipe=(time,calories)=>{
+      
+      setTotalTime(totalTime+time)
+      setTotalCalories(totalCalories+calories);
+
+
   }
 
   return (
@@ -22,7 +32,13 @@ function App() {
       <Banner></Banner>
       <div className='flex justify-between'>
         <Recipes handleWantToCook={handleWantToCook}></Recipes>
-        <Sidebar recipes={recipes}></Sidebar>
+        <Sidebar
+          recipes={recipes}
+          handlePreparingRecipe={handlePreparingRecipe}
+          totalTime={totalTime}
+          totalCalories={totalCalories}
+
+        ></Sidebar>
       </div>
       <ToastContainer
         position="top-right"
