@@ -6,25 +6,37 @@ const Sidebar = () => {
                 <div className="mb-10">
                     <h1 className="text-2xl font-bold text-center mb-5">Want to cook: 00</h1>
                     <hr />
-                    <div className="flex gap-24 justify-start mt-5">
-                        <div><p>Name</p></div>
-                        <div><p>Time</p></div>
-                        <div><p>Calories</p></div>
-                    </div>
+                    <table className="mt-5">
+                        <thead>
+                            <tr className="flex gap-24 justify-start">
+                                <th><p>Name</p></th>
+                                <th><p>Time</p></th>
+                                <th><p>Calories</p></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
                 </div>
                 <div>
-                    <h1 className="text-2xl font-bold text-center mb-5">Currently cooking: 02</h1>
+                    <h1 className="text-2xl font-bold text-center mb-5">Currently cooking: 00</h1>
                     <hr />
-                    <div className="flex gap-24 justify-start mt-5">
-                        <div><p>Name</p></div>
-                        <div><p>Time</p></div>
-                        <div><p>Calories</p></div>
-                    </div>
+                    <table className="mt-5">
+                        <thead>
+                            <tr className="flex gap-24 justify-start">
+                                <th><p>Name</p></th>
+                                <th><p>Time</p></th>
+                                <th><p>Calories</p></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
                 </div>
 
-                <div className="mt-10 flex gap-24">
-                    <p>Total Time= 45 minutes</p>
-                    <p>Total Calories= 1050 calories</p>
+                <div className="mt-10 flex gap-32">
+                    <p>Total Time= 00 minutes</p>
+                    <p>Total Calories= 00 calories</p>
                 </div>
 
             </div>

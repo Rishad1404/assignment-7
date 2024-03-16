@@ -6,9 +6,9 @@ const Recipe = ({recipe}) => {
     const {recipe_name,short_description,recipe_image,ingredients,preparing_time,calories}=recipe;
     return (
         <div>
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card w-96 bg-base-100 shadow-2xl">
                 <figure className="px-10 pt-10">
-                    <img src={recipe_image}  className="rounded-xl" />
+                    <img src={recipe_image}  className="rounded-xl h-[200px]" />
                 </figure>
                 <div className="card-body  ">
                     <h2 className="card-title">{recipe_name}</h2>
