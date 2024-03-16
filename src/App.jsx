@@ -1,6 +1,7 @@
 import './App.css'
 import Banner from './Components/Header/Banner';
 import Header from './Components/Header/Header';
+import Sidebar from './Components/Header/Sidebar';
 import Recipes from './Components/Recipes/Recipes';
 
 function App() {
@@ -11,7 +12,11 @@ function App() {
 
      <Header></Header>
       <Banner></Banner>
-      <Recipes></Recipes>
+      <div className='flex justify-between'>
+        <Recipes></Recipes>
+        <Sidebar></Sidebar>
+
+      </div>
     </>
   )
 }
