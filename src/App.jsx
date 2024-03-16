@@ -11,19 +11,20 @@ function App() {
   const [recipes,setRecipes]=useState([]);
   const[totalTime,setTotalTime]=useState(0)
   const[totalCalories,setTotalCalories]=useState(0)
+  const[current,setCurrent]=useState([])
 
   const handleWantToCook=recipe=>{
     const newRecipes=[...recipes,recipe]
     setRecipes(newRecipes)
   }
 
-  const handlePreparingRecipe=(time,calories)=>{
-      
+  const handlePreparingRecipe=(time,calories,cooking)=>{      
       setTotalTime(totalTime+time)
       setTotalCalories(totalCalories+calories);
-
+      setCurrent([...current,cooking])
 
   }
+
 
   return (
     <>
@@ -37,7 +38,7 @@ function App() {
           handlePreparingRecipe={handlePreparingRecipe}
           totalTime={totalTime}
           totalCalories={totalCalories}
-
+          current={current}
         ></Sidebar>
       </div>
       <ToastContainer
