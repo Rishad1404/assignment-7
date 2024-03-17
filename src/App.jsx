@@ -6,6 +6,7 @@ import Sidebar from './Components/Header/Sidebar';
 import Recipes from './Components/Recipes/Recipes';
 import { Bounce, ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import SectionHeading from './Components/SectionHeading';
 
 function App() {
   const [recipes,setRecipes]=useState([]);
@@ -55,6 +56,7 @@ function App() {
 
      <Header></Header>
       <Banner></Banner>
+      <SectionHeading></SectionHeading>
       <div className='flex justify-between'>
         <Recipes handleWantToCook={handleWantToCook}></Recipes>
         <Sidebar
