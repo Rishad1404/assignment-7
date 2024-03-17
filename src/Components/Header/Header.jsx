@@ -13,7 +13,7 @@ const Header = () => {
                   </ul>
                 </div>
 
-                <div className="relative w-44 mr-[-80px] lg:w-72 lg:mr-[-270px]">
+                <div className="relative w-28 mr-[-10px] lg:w-72 lg:mr-[-270px]">
                     <span className="absolute inset-y-0 left-0 flex items-center pl-3">
                         <CiSearch />
                     </span>
@@ -25,11 +25,11 @@ const Header = () => {
                 <div className="navbar-end">
                     <div className="dropdown">
                         <div className="relative">
-                            <button tabIndex="0" role="button" className="flex items-center justify-center w-10 h-10 rounded-full bg-green-700 text-white">
+                            <button tabIndex="0" role="button" className="flex items-center justify-center w-10 h-10 rounded-full bg-green-700 text-white mr-3">
                                 <FaRegUserCircle />
                             </button>
                         </div>
-                        <ul tabIndex="0" className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 lg:hidden">
+                        <ul tabIndex="0" className="menu menu-lg dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 lg:hidden right-5">
                             <li><a>Home</a></li>
                             <li><a>Recipes</a></li>
                             <li><a>About</a></li>
