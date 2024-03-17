@@ -1,7 +1,7 @@
 const Banner = () => {
     return (
         <section className="my-10 relative">
-            <div className="hero lg:h-[700px] rounded-xl" style={{backgroundImage: 'url(images/banner.jfif)'}}>
+            <div className="hero lg:h-[700px] rounded-xl" style={{backgroundImage: 'url(https://i.imgur.com/UVcha9u.jpeg)'}}>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"></div>
                 <div className="hero-content text-center text-neutral-content relative z-10">
                     <div>

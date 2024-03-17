@@ -3,7 +3,7 @@ import { FaRegUserCircle } from "react-icons/fa";
 const Header = () => {
     return (
         <header className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold">Recipe Calories</h1>
+            <h1 className="text-2xl font-bold">Recipe Heaven</h1>
             <div className="navbar-center hidden lg:flex items-center">
                   <ul className="menu menu-horizontal font-manrope gap-11">
                     <li><a className="font-bold">Home</a></li>
