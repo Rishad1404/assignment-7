@@ -11,6 +11,7 @@ const Append = ({current}) => {
                         <th>Name</th>
                         <th>Time</th>
                         <th>Calories</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody className='bg-base-200'>

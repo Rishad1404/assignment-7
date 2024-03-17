@@ -23,7 +23,7 @@ function App() {
       setRecipes(newRecipes)
     }
     else{
-      toast.error('Already Preparing This Item', {
+      toast.error('Already added this item', {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -57,7 +57,7 @@ function App() {
      <Header></Header>
       <Banner></Banner>
       <SectionHeading></SectionHeading>
-      <div className='flex justify-between'>
+      <div className='lg:flex justify-between'>
         <Recipes handleWantToCook={handleWantToCook}></Recipes>
         <Sidebar
           recipes={recipes}

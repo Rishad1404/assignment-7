@@ -2,12 +2,12 @@ import PropTypes from 'prop-types';
 import Append from '../AppendRecipe/Append';
 const Sidebar = ({recipes,handlePreparingRecipe,totalTime,totalCalories,current,handleDelete}) => {
     return (
-        <div>
-            <div className="border border-black p-10 w-[650px]">
+        <div className='my-10 lg:my-0'>
+            <div className="border border-black p-10 lg:w-[650px]">
                 <div className="mb-10">
                     <h1 className="text-2xl font-bold text-center mb-5">Want to cook : {recipes.length}</h1>
                     <hr />
-                    <table className=" table">
+                    <table className="table">
                         <thead>
                             <tr>
                                 <th></th>
@@ -17,7 +17,7 @@ const Sidebar = ({recipes,handlePreparingRecipe,totalTime,totalCalories,current,
                                 <th></th>
                             </tr>
                         </thead>
-                        <tbody  className='bg-base-200'>
+                        <tbody className='bg-base-200'>
                             {
                                 recipes.map((recipe, idx) => <tr key={idx}>
                                     <td>{idx + 1}</td>
@@ -34,11 +34,9 @@ const Sidebar = ({recipes,handlePreparingRecipe,totalTime,totalCalories,current,
                     </table>
                 </div>
 
-                <Append current={current}>
-                    
-                </Append>
+                <Append current={current}></Append>
 
-                <div className="mt-10 flex justify-end gap-10 font-bold">
+                <div className="mt-10 lg:flex justify-end gap-10 font-bold">
                     <p>Total Time= {totalTime} minutes</p>
                     <p>Total Calories= {totalCalories} calories</p>
                 </div>
