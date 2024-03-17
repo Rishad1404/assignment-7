@@ -37,7 +37,7 @@ const Sidebar = ({recipes,handlePreparingRecipe,totalTime,totalCalories,current}
                     
                 </Append>
 
-                <div className="mt-10 flex gap-32">
+                <div className="mt-10 flex justify-end gap-10">
                     <p>Total Time= {totalTime} minutes</p>
                     <p>Total Calories= {totalCalories} calories</p>
                 </div>

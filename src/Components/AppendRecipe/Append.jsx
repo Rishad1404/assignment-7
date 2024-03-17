@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 const Append = ({current}) => {
-    const {recipe_name,preparing_time,calories}=current;
     return (
         <div>
             <h1 className="text-2xl font-bold text-center mb-5">Currently cooking : {current.length}</h1>

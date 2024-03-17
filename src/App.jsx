@@ -14,8 +14,27 @@ function App() {
   const[current,setCurrent]=useState([])
 
   const handleWantToCook=recipe=>{
-    const newRecipes=[...recipes,recipe]
-    setRecipes(newRecipes)
+
+
+    const isExist=recipes.find(item=>item.recipe_id==recipe.recipe_id)
+    if(!isExist){
+      const newRecipes=[...recipes,recipe]
+      setRecipes(newRecipes)
+    }
+    else{
+      toast.success('Already Preparing This Item', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
+        });
+    }
+
   }
 
   const handlePreparingRecipe=(time,calories,cooking)=>{      
