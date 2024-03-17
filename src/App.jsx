@@ -22,7 +22,7 @@ function App() {
       setRecipes(newRecipes)
     }
     else{
-      toast.success('Already Preparing This Item', {
+      toast.error('Already Preparing This Item', {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -37,10 +37,15 @@ function App() {
 
   }
 
+  const handleDelete=id=>{
+    const newRecipes=recipes.filter(item=>item.recipe_id!=id)
+    setRecipes(newRecipes)
+  }
+
   const handlePreparingRecipe=(time,calories,cooking)=>{      
       setTotalTime(totalTime+time)
       setTotalCalories(totalCalories+calories);
-      setCurrent([...current,cooking])
+      setCurrent([...current,cooking])     
 
   }
 
@@ -58,6 +63,7 @@ function App() {
           totalTime={totalTime}
           totalCalories={totalCalories}
           current={current}
+          handleDelete={handleDelete}
         ></Sidebar>
       </div>
       <ToastContainer

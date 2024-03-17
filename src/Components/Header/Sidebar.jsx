@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import Append from '../AppendRecipe/Append';
-const Sidebar = ({recipes,handlePreparingRecipe,totalTime,totalCalories,current}) => {
+const Sidebar = ({recipes,handlePreparingRecipe,totalTime,totalCalories,current,handleDelete}) => {
     return (
         <div>
             <div className="border border-black p-10 w-[650px]">
@@ -26,6 +26,7 @@ const Sidebar = ({recipes,handlePreparingRecipe,totalTime,totalCalories,current}
                                     <td>{recipe.calories} calories</td>
                                     <td><button onClick={() => {
                                         handlePreparingRecipe(recipe.preparing_time, recipe.calories,recipe);
+                                        handleDelete(recipe.recipe_id)
                                     }} className="btn border-none rounded-full bg-[#0BE58A] text-black px-4">Preparing..</button></td>
                                 </tr>)
                             }
@@ -37,7 +38,7 @@ const Sidebar = ({recipes,handlePreparingRecipe,totalTime,totalCalories,current}
                     
                 </Append>
 
-                <div className="mt-10 flex justify-end gap-10">
+                <div className="mt-10 flex justify-end gap-10 font-bold">
                     <p>Total Time= {totalTime} minutes</p>
                     <p>Total Calories= {totalCalories} calories</p>
                 </div>
@@ -52,7 +53,8 @@ Sidebar.propTypes={
     handlePreparingRecipe:PropTypes.func,
     totalTime:PropTypes.number,
     totalCalories:PropTypes.number,
-    current:PropTypes.object
+    current:PropTypes.object,
+    handleDelete:PropTypes.func
 }
 
 export default Sidebar;
